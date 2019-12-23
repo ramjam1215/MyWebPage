@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'jc-web-page';
+  title = 'JC InterActive';
+  author = 'James Corcoran';
 }

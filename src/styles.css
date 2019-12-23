@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+/* center align using margin: auto, need "width:" to be set to keep from streatching */
+
+.top-header {
+    background-color: black;
+    margin: auto;
+    border-radius: 12px;
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 10px;
+    width: 45%;
+    max-width: 170px;
+    overflow: auto;
+    background-color: grey;
+    border: 1px solid white;
+    border-radius: 12px;
+}
+
+.nav-link {
+    display: inline;
+}
+
+.nav-tag {
+    padding: 8px;
+    font-size: 16px;
+    color: deepskyblue;
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid white;
+}
+
+.nav-tag-last {
+    padding: 8px;
+    font-size: 16px;
+    color: deepskyblue;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+
+.list {
+    list-style-type: square;
+    margin: auto;
+    padding: 0;
+    width: 45%;
+    max-width: 220px;
+}
+
+.list-text {
+    display: inline;
+    padding: 8px;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: gray;
+    color: white;
+}
+
+h1 {
+    font-size: 32px;
+    color: black;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+}
+
+h4 {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+}
+
+.jcHeader1 {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+}
+
+.jcHeader2 {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
+

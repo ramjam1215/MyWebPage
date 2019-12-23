@@ -2,34 +2,71 @@
 
 <div>
     <h2>Real-Time Systems: Space Invaders Game</h2>
-    <p>Written in C++... blah blah blah</p>
-    <div>
+    <!-- maybe use ls tag instead?-->
+    <p> Written in C#; using Visual Studio and Depaul University’s Azul game engine.</p>
+    <p>
+        Design Patterns used: Object Pool, Proxys, Singletons, Templates, Observers, Commands, State, and Strategy.
+        Implemented collision systems using a basic 2D grid system to determine intersection between shape objects
+        These shape objects are held within an object, essentially sprites, (game objects that are rendered to a display)
+        that uses inheritance (from a lot of abstract objects, like interfaces) and managed in a double linked list
+    </p>
+    <p>
+        Favorite portion: the observers and the timer manager objects, which held multiple command objects. 
+        These commands would be added and processed when certain collisions, or time events elapsed.
+        I created a sort that basically functions like an Insertion Sort, but the list is always in sorted order.
+        It inserts an object into its correct position based on a delta time when it should be processed. 
+        *(I want to reiterate that I never called a sort on the list.
+        For example; if I inserted a node arbitrarily and then called a sort on the entire list every time, that would be far less efficient)
+    </p>
+
+    <ul class="list">
+        <li>
+            <span class="list-text">Source Code on GitHub: </span>
             <a href="https://github.com/ramjam1215/SpaceInvaders">
-                My Source Code on GitHub
+                <img src="../../assets/images/GitHub-Mark-32px.png">
             </a>
-    </div>
-    
-    <div>
-        <a href="http://youtu.be/W0iKOQ_Qanw?hd=1">YouTube Video Demo</a>
-    </div>
+        </li>
+
+        <li>
+            <span class="list-text">YouTube Video Demo: </span>
+            <a href="http://youtu.be/W0iKOQ_Qanw?hd=1">
+                <img src="../../assets/images/icons8-youtube-32.png">
+            </a>
+        </li>
+    </ul>
     
 </div>
 
 <div>
     <h3>Mobile Development: Rick&Morty Game</h3>
-    <p> Written in Swift.... blah blah blah</p>
-    <div>
-        <a href="https://github.com/ramjam1215/RickAndMortyGame">
-            My Source Code on GitHub
-        </a>
-    </div>
-   
-    <div>
-        <a href="https://youtu.be/vt18P1Xw8lM">YouTube Video Demo</a>
-    </div>
+    <p> Written in Swift; using XCode and SpriteKit for iOS environment. </p>
+    <p>
+        It’s a basic 2D game that uses a grid system.
+        The basic premise is to move the character across the screen to “catch falling objects” to score points before the time expires. 
+        This project built on my previous experience, but with a different environment and tools completely on my own. 
+        I used inheritance to create my own sprite objects that derived from the base SKSpriteNode object.
+        This was primarily used for the double dispatching issue I had with the Contact Delegate, which ultimately determines what should happen when collisions occur.
+     </p>
     
+    <ul class="list">
+        <li>
+            <span class="list-text">Source Code on GitHub: </span>
+            <a href="https://github.com/ramjam1215/RickAndMortyGame">
+                <img src="../../assets/images/GitHub-Mark-32px.png">
+            </a>
+        </li>
+    
+        <li>
+            <span class="list-text">YouTube Video Demo: </span>
+            <a href="https://youtu.be/vt18P1Xw8lM">
+                <img src="../../assets/images/icons8-youtube-32.png">
+            </a>
+        </li>
+    </ul>
+
 </div>
 
 <div>
     <h4>Other Projects and Concepts</h4>
+    <p>still need to add more</p>
 </div>
