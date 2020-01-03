@@ -1,7 +1,8 @@
 /* center align using margin: auto, need "width:" to be set to keep from streatching */
 
 .top-header {
-    background-color: black;
+    background-image: url(../src/assets/images/si_banner.jpg);
+    background-size: cover;
     margin: auto;
     border-radius: 12px;
 }
@@ -22,6 +23,10 @@
     display: inline;
 }
 
+.durp {
+    text-align: center;
+}
+
 .nav-tag {
     padding: 8px;
     font-size: 16px;
@@ -38,6 +43,24 @@
     text-align: center;
     text-decoration: none;
     
+}
+
+.si {
+    margin: auto;
+    width: 800px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: lightgray;
+    margin-bottom: 20px;
+}
+
+
+.notes {
+    list-style-type: square;
+    padding: 0;
+    width: 45%;
+    max-width: 420px;
 }
 
 
@@ -76,15 +99,19 @@ h2 {
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 18px;
     color: black;
     text-align: center;
 }
 
 h4 {
-    font-size: 24px;
+    font-size: 18px;
     color: black;
     text-align: center;
+}
+
+.it {
+    font-style: italic;
 }
 
 .jcHeader1 {

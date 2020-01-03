@@ -1,23 +1,53 @@
 <h1>My Projects</h1>
 
-<div>
+<div class="si">
     <h2>Real-Time Systems: Space Invaders Game</h2>
-    <!-- maybe use ls tag instead?-->
     <p> Written in C#; using Visual Studio and Depaul University’s Azul game engine.</p>
-    <p>
-        Design Patterns used: Object Pool, Proxys, Singletons, Templates, Observers, Commands, State, and Strategy.
-        Implemented collision systems using a basic 2D grid system to determine intersection between shape objects
-        These shape objects are held within an object, essentially sprites, (game objects that are rendered to a display)
-        that uses inheritance (from a lot of abstract objects, like interfaces) and managed in a double linked list
-    </p>
-    <p>
-        Favorite portion: the observers and the timer manager objects, which held multiple command objects. 
-        These commands would be added and processed when certain collisions, or time events elapsed.
-        I created a sort that basically functions like an Insertion Sort, but the list is always in sorted order.
-        It inserts an object into its correct position based on a delta time when it should be processed. 
-        *(I want to reiterate that I never called a sort on the list.
-        For example; if I inserted a node arbitrarily and then called a sort on the entire list every time, that would be far less efficient)
-    </p>
+    <p> The project took about 3 months</p>
+    <h3> Design Patterns & Points of Emphasis </h3>
+    
+    <ul>
+        <li>
+            <p>
+                Object Pool, Proxys, Singletons, Templates, Observers, Commands, State, and Strategy.
+            </p>
+        </li>
+
+        <li>
+            <p>
+                It implemented collision systems using a basic 2D grid system to determine intersection between shape objects.
+                These shape objects are held within an object, essentially sprites, (game objects that are rendered to a display)
+                that uses inheritance (from a lot of abstract objects, like interfaces) and managed in a double linked list.
+            </p>
+        </li>
+    </ul>
+
+    <h3>My Favorite Parts</h3>
+    <ul>
+        <li>
+            <p>
+                My implementation of the observers and the timer manager objects, which held multiple command objects. 
+                These commands would be added and processed when certain collisions, or time events elapsed.
+                I created a sort that basically functions like an Insertion Sort, but the list is always in sorted order.
+                It inserts an object into its correct position based on a delta time when it should be processed. 
+                *(I want to reiterate that I never called a sort on the list.
+                For example; if I inserted a node arbitrarily and then called a sort on the entire list every time, that would be far less efficient)
+            </p>
+        </li>
+        
+        <li>
+            <p>
+                Another concept I implemented into this project was a recycling of memory/objects I created initially.
+                My "graveyard" implementation was used/created for efficiency between levels. It was put together towards the end and had alot bugs.
+                But, the primary concept was when a object was hit or "destroyed" in the game, instead of letting it be flagged for garbage collection,
+                I would put the object into a linked list where it was stored for the next round(hence the name graveyard). Alot of issues came along with
+                this like resetting positions and determining what each object was inside the graveyard (Like is it a shield block or a specific alien, for example).
+                But overall I got it to work with making little hacks in the game objects and adding information when they were stored.
+            </p>
+        </li>
+
+    </ul>
+        
 
     <ul class="list">
         <li>
@@ -37,17 +67,78 @@
     
 </div>
 
-<div>
-    <h3>Mobile Development: Rick&Morty Game</h3>
+<div class="si">
+    <h2>Mobile Development: Rick&Morty Game</h2>
     <p> Written in Swift; using XCode and SpriteKit for iOS environment. </p>
-    <p>
-        It’s a basic 2D game that uses a grid system.
-        The basic premise is to move the character across the screen to “catch falling objects” to score points before the time expires. 
-        This project built on my previous experience, but with a different environment and tools completely on my own. 
-        I used inheritance to create my own sprite objects that derived from the base SKSpriteNode object.
-        This was primarily used for the double dispatching issue I had with the Contact Delegate, which ultimately determines what should happen when collisions occur.
-     </p>
-    
+    <p> This took about 3 months</p>
+    <h3> Concepts </h3>
+    <ul>
+        <li>
+            <p>
+                It’s a basic 2D game that uses a grid system. 
+                The basic premise is to move the character across the screen to "catch" falling objects to score points before the time expires. 
+            </p>
+        </li>
+
+        <li>
+            <p>
+                I used similar concepts from previous projects like
+                timers to create events to "drop" objects from the top of the screen and randomized the velocity of those objects.
+            </p>
+        </li>
+
+        <li>
+            <p>
+                I also created some sprite objects that serve as "stars" in the background that just loops through these objects and randomly "hide" or "reveal" the object.\
+                I did this to give it a sort of active background with flashing lights in space instead of a blank screen.
+            </p>
+        </li>
+
+        <li>
+            <p>
+                I used inheritance to create my own sprite objects that derived from the base SKSpriteNode object.
+                This was primarily used for the double dispatching issue I had with the Contact Delegate,
+                which ultimately determines what should happen when collisions occur.
+            </p>
+
+        </li>
+
+        <li>
+            <p>
+                Just to elaborate a little bit on the double dispatching issue, its essentially a way to figure out what two objects are coming into contact with by calling a certain function.
+                The function derives from an interface or abstract object and then for each different object they have a certain tasks they must do. Since all the objects derived from the base object,
+                we need to create our own versions like a wrapper around the base object so we can perform more complicated or specific tasks. 
+            </p>
+        </li>
+    </ul>
+
+    <h3>Reasoning & Evolution</h3>
+    <ul>
+        <li>
+            <p>
+                This project built on my previous experiences, but with a different environment and tools completely on my own.
+            </p>
+
+        </li>
+
+        <li>
+            <p>
+                I originally had an original idea of calling it the garbage collection game, which is sort of a play on words because of computer systems
+                and it would be a game collecting trash in a park or something.
+                But, I'm a big fan of the Rick & Morty show and wanted to also make a really simple background by putting the game in space.
+            </p>
+        </li>
+
+        <li>
+            <p>
+                It was my first experience with macOS, as well, so to expand on my experience
+                I used some built-in tools to edit and convert sound clips into .wav files.
+                In turn, I used them in association with the collision system and timer mechanics of the game to prudce sound effects. 
+            </p>
+            
+        </li>
+    </ul>
+
     <ul class="list">
         <li>
             <span class="list-text">Source Code on GitHub: </span>
@@ -64,6 +155,47 @@
         </li>
     </ul>
 
+</div>
+
+<div class="si">
+    <h2>Web Development: Business Cards</h2>
+    <p>Written in JavaScript/TypeScript using Angular framework</p>
+    <h3>Components and Software</h3>
+    <ul>
+        <li><p>This app uses Google's vision API to extract text from a picture.</p></li>
+        <li><p>Also uses ngx-webcam to connect to the user's webcam to take a screenshot.</p></li>
+        <li><p>It functions as a database for saving user information using Google Firebase </p></li>
+    </ul>
+
+    <h3>Concepts and Usage </h3>
+    <ul>
+        <li>
+            It uses alot of different concepts intrigal to web development;
+            like login information, authentication, database management, and CSS styling.
+        </li>
+
+        <li>
+            <p>The main purpose behind this project is to implement the basic functions; Create, Read, Update, and Destroy (C.R.U.D) data on a Web app that uses persistent storage. </p>
+        </li>
+
+        <li>
+            <p>
+                I highly recommend visiting the site, which is also hosted on Firebase 
+                by going to my GitHub link to use my basic access information located in the ReadMe file.
+                <span class="it">It may take a minute for firebase to fetch the dist file and host the web site. </span>
+            </p>
+            
+        </li>
+    </ul>
+
+    <ul class="list">
+        <li>
+            <span class="list-text">Source Code on GitHub: </span>
+            <a href="https://github.com/ramjam1215/BusinessCards">
+                <img src="../../assets/images/GitHub-Mark-32px.png">
+            </a>
+        </li>
+    </ul>
 </div>
 
 <div>
