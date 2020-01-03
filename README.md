@@ -1,9 +1,12 @@
 # JcWebPage
-- Current feature Branch: fbLook
+- Current Branch: master
 
 # TODO
 - add firebase hosting
 - make it pretty
+
+# 1-02-2020
+- added some CSS, pictures, and basic resume info.
 
 # 12-23-2019
 - added mostly CSS styling to the webpage, its less ugly now.
