@@ -8,6 +8,7 @@
 
 </div>
 
+<like-button *ngFor="let l of data | async; let i = index" [i] ="i" [likes]="l"></like-button>
 
 <div>
   <router-outlet></router-outlet>

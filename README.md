@@ -1,5 +1,5 @@
 # JcWebPage
-- Current Branch: master
+- Current Branch: fbFirestore
 
 # TODO
 - add firebase hosting
@@ -15,3 +15,8 @@
 - simply started a new angular app for resume stuff.
 - added a bio & title page component for displaying my info
 - did some routes and links to projects and video, then verified they worked.
+
+
+# installs
+- npm install -g firebase-tools
+- npm install --save firebase @angular/fire
