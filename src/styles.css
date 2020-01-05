@@ -5,6 +5,7 @@
     background-size: cover;
     margin: auto;
     border-radius: 12px;
+    padding-bottom: 50px;
 }
 
 .nav-bar {
@@ -23,8 +24,26 @@
     display: inline;
 }
 
+.pushD
+{
+    padding-top: 20px;
+}
+
 .durp {
     text-align: center;
+}
+
+.jcbutton {
+    font-size: 14px;
+    width: 60px;
+    border-radius: 6px;
+    background-color: deepskyblue;
+    padding-right: 10px;
+    border: 1px solid white;
+}
+
+.jcbutton:hover {
+    background-color: dodgerblue;
 }
 
 .nav-tag {

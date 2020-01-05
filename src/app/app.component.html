@@ -1,14 +1,30 @@
 <div class="top-header">
   <h1 class="jcHeader1">{{ title }}</h1>
   <h2 class="jcHeader2">By: {{ author }}</h2>
-  <ul class="nav-bar">
-    <li class="nav-link"><a class="nav-tag" [routerLink]="['/title']"> Title Page</a></li>
-    <li class="nav-link"><a class="nav-tag-last" [routerLink]="['/bio']"> About Me </a></li>
-  </ul>
+  <h2 class="jcHeader2">{{email}}</h2>
+
+  <div class="pushD">
+    <ul class="nav-bar">
+      <li class="nav-link"><a class="nav-tag" [routerLink]="['/title']"> Title Page</a></li>
+      <li class="nav-link"><a class="nav-tag-last" [routerLink]="['/bio']"> About Me </a></li>
+    </ul>
+  </div>
+  
 
 </div>
 
-<like-button *ngFor="let l of data | async; let i = index" [i] ="i" [likes]="l"></like-button>
+<div class="durp">
+
+  <div *ngIf="showMe()">
+    <like-button *ngFor="let l of data | async; let i = index" [i] ="i" [likes]="l"></like-button>
+  </div>
+  
+  <div *ngIf="!showMe()">
+    Thanks for checking out my website and liking it!
+  </div>
+
+</div>
+
 
 <div>
   <router-outlet></router-outlet>

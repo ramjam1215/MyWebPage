@@ -1,22 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { config } from './app.config.js';
-import { merge } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WebAppService {
-
-  //private likesDoc: AngularFirestoreDocument;
+  
+  bShow: boolean;
 
   constructor(private db: AngularFirestore)
-  {  
-    
+  {
+    this.bShow = true;
+    console.log( this.bShow + " from constructor" );
   }
 
   getData() { return this.db.collection(config.collection_endpoint).snapshotChanges(); }
-
 
   /*
   updating data
@@ -32,4 +31,13 @@ export class WebAppService {
     //this.likesDoc = this.db.doc(`${config.collection_endpoint}/${uid}`);
     //this.likesDoc.update(update);
   }
+
+  hide()
+  {
+    this.bShow = false;
+    console.log(this.bShow + " from hide()");
+  }
+
+
+
 }

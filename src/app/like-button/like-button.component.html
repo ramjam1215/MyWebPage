@@ -1,8 +1,10 @@
-<p>like-button works!</p>
 
 <div>
-    <button class="" (click)="addLike()">Like!</button>
-    <div *ngIf="likes">
-      #{{i}}:  {{ likes.uid }} => {{ likes.data }}
-    </div>
-  </div>
+  <span>
+    <button class="jcbutton" (click)="addLike()">Like!</button>
+    <span *ngIf="likes">
+      {{ likes.data }}!
+    </span>
+  </span>
+</div>
+

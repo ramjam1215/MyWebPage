@@ -11,17 +11,11 @@ export class LikeButtonComponent implements OnInit {
 
   @Input() likes: Like;
   @Input() i: number;
-  bShow = true;
   
-  constructor(private appService: WebAppService) { }
+  constructor(private appService: WebAppService) {   }
 
-  ngOnInit() {
-  }
-
-  hide()
-  {
-    this.bShow = false;
-  }
+  ngOnInit() { }
+  
 
   addLike()
   {
@@ -33,20 +27,22 @@ export class LikeButtonComponent implements OnInit {
     this.appService.updateData(this.likes.uid, this.likes.data)
     .then(res => {
       console.log("pushed to database");
-      console.log(res);
+      //console.log(res);
     })
 
     .catch(err =>{
       console.log("Something went wrong");
-      console.log(err);
+      //console.log(err);
     });
 
-    this.hide();
+    this.appService.hide();
   }
+
 
   increment()
   {
     this.likes.data++;
+    
   }
 
   

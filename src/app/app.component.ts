@@ -21,11 +21,13 @@ export class AppComponent implements OnInit {
   
   title = 'JC InterActive';
   author = 'James Corcoran';
-
+  email = 'jimmy.c.corcoran@gmail.com';
 
   data: Observable<any>;
 
-  constructor(private db: AngularFirestore, private appService: WebAppService) { }
+  constructor(private db: AngularFirestore, private appService: WebAppService) {
+
+   }
 
   //this is basically the read
   ngOnInit()
@@ -36,16 +38,17 @@ export class AppComponent implements OnInit {
         const data = a.payload.doc.get("likes");
         const uid = a.payload.doc.id; 
 
-        console.log(data);
-        console.log(uid);
-        //document.data is an iterable object
-        //property spread notation:
-        //basically builds the properties of this object for you
+        //console.log(data);
+        //console.log(uid);
+
         return {uid, data};
       });
     })
     );
   }
 
-
+  showMe()
+  {
+    return this.appService.bShow;
+  }
 }

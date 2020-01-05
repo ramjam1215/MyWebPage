@@ -1,7 +1,7 @@
 <h1>My Projects</h1>
 
 <div class="si">
-    <h2>Real-Time Systems: Space Invaders Game</h2>
+    <h2>Real-Time Systems: Space Invaders Game (my favorite game of all-time)</h2>
     <p> Written in C#; using Visual Studio and Depaul University’s Azul game engine.</p>
     <p> The project took about 3 months</p>
     <h3> Design Patterns & Points of Emphasis </h3>
@@ -9,15 +9,15 @@
     <ul>
         <li>
             <p>
-                Object Pool, Proxys, Singletons, Templates, Observers, Commands, State, and Strategy.
+                Object Pool, Proxy, Singleton, Template, Observer, Command, State, and Strategy.
             </p>
         </li>
 
         <li>
             <p>
-                It implemented collision systems using a basic 2D grid system to determine intersection between shape objects.
-                These shape objects are held within an object, essentially sprites, (game objects that are rendered to a display)
-                that uses inheritance (from a lot of abstract objects, like interfaces) and managed in a double linked list.
+                It implements a collision system using a basic 2D grid system, which determines intersection between shape objects.
+                These shape objects are held within an object, called a sprite (game object that is rendered to a display),
+                that uses inheritance (from multiple abstract objects/interfaces) and managed in a double linked list.
             </p>
         </li>
     </ul>
@@ -31,15 +31,16 @@
                 I created a sort that basically functions like an Insertion Sort, but the list is always in sorted order.
                 It inserts an object into its correct position based on a delta time when it should be processed. 
                 *(I want to reiterate that I never called a sort on the list.
-                For example; if I inserted a node arbitrarily and then called a sort on the entire list every time, that would be far less efficient)
+                For example; if I inserted a node arbitrarily and then called a sort on the entire list every time,
+                that would be far less efficient)
             </p>
         </li>
         
         <li>
             <p>
-                Another concept I implemented into this project was a recycling of memory/objects I created initially.
+                Another concept I implemented into this project was a recycling of memory/objects, that are created when the program runs.
                 My "graveyard" implementation was used/created for efficiency between levels. It was put together towards the end and had alot bugs.
-                But, the primary concept was when a object was hit or "destroyed" in the game, instead of letting it be flagged for garbage collection,
+                But, the primary concept pertains to a object  that was hit or "destroyed" in the game, instead of letting it be flagged for garbage collection,
                 I would put the object into a linked list where it was stored for the next round(hence the name graveyard). Alot of issues came along with
                 this like resetting positions and determining what each object was inside the graveyard (Like is it a shield block or a specific alien, for example).
                 But overall I got it to work with making little hacks in the game objects and adding information when they were stored.
@@ -83,13 +84,14 @@
         <li>
             <p>
                 I used similar concepts from previous projects like
-                timers to create events to "drop" objects from the top of the screen and randomized the velocity of those objects.
+                timers. For example; I create events to "drop" objects from the top of the screen and also randomizes the velocity of those objects.
             </p>
         </li>
 
         <li>
             <p>
-                I also created some sprite objects that serve as "stars" in the background that just loops through these objects and randomly "hide" or "reveal" the object.\
+                I also created some sprite objects, which were placed into an array, that serve as "stars" in the background.
+                I loops through these objects and randomly "hide" or "reveal" the object.
                 I did this to give it a sort of active background with flashing lights in space instead of a blank screen.
             </p>
         </li>
@@ -105,9 +107,11 @@
 
         <li>
             <p>
-                Just to elaborate a little bit on the double dispatching issue, its essentially a way to figure out what two objects are coming into contact with by calling a certain function.
-                The function derives from an interface or abstract object and then for each different object they have a certain tasks they must do. Since all the objects derived from the base object,
-                we need to create our own versions like a wrapper around the base object so we can perform more complicated or specific tasks. 
+                Just to elaborate a little bit on the double dispatching issue, its essentially a way to figure out what two objects are
+                coming into contact with one another by calling a certain function.
+                The function derives from an interface or abstract object and depending on the type (Object-Oriented Principle)
+                they have certain tasks they must do. Since all the objects derived from the base object,
+                we need to create our own versions, like a wrapper around the base object, so we can perform more complicated or specific tasks. 
             </p>
         </li>
     </ul>
@@ -123,8 +127,8 @@
 
         <li>
             <p>
-                I originally had an original idea of calling it the garbage collection game, which is sort of a play on words because of computer systems
-                and it would be a game collecting trash in a park or something.
+                My original idea was calling it the garbage collection game, which is sort of a play on words because of computer systems
+                and it would be a game collecting trash in a park or something(because I hate when people liter).
                 But, I'm a big fan of the Rick & Morty show and wanted to also make a really simple background by putting the game in space.
             </p>
         </li>
